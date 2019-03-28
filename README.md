@@ -2,7 +2,7 @@
 
 Available Files:
 
-PALM table example: 
+Elyra table example: 
 - Index
 - First Frame: Frame at which an event firstly appear
 - Number Frames: (relevant only when grouping)
@@ -20,4 +20,4 @@ Script_R1_ROI_mod (ROI modification script):
 - Input: ROIs obtained via Fiji -> need to be named Cell*.txt
 - Output: ROIs ready to be used for "PALM data analysis" script -> R.Cell*.txt
 
-PALM data analysis
+Script_R2_PALM analysis (PALM data analysis):
