@@ -24,9 +24,9 @@ Script_R1_ROI_mod (ROI modification script):
 Script_R2_PALM analysis (PALM data analysis):
 - Input: ROIs obtained from "Script_R1_ROI_mod"
 - Input: Elyra_Table_Example
-- Output:
-- Output:
-- Output:
+- Output: updatedtableX.txt (Elyra table drifted according to the ROIs)
+- Output: AreaListX.RData (ROIs)
+- Output: OutputTableX.txt (PALM_analysis_output example)
 
 PALM_analysis_output example: (first 13 columns are the same as the "Elyra_Table_example")
 - CellName: ROI file name (R.Cell*.txt)
