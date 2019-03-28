@@ -14,3 +14,14 @@ library("RColorBrewer")
 ############################################################################################################################################################################
 #channels separation
 ############################################################################################################################################################################
+
+directory_input<-readline("where is the file? e.g.C:/Users/Elyra/table_folder:")
+directory<-gsub("\\", "/", directory_input, fixed=TRUE)                                                   #working on windows so I have to invert \ to /
+setwd(directory)                                                                                          #setting working directory
+dir()                                                                                                     #show directory content
+file1name<-readline("file1 name:")                                                                        #input the name of the PALM localization table file in the console after running this line
+readLines(file1name)                                                                                      
+
+#Elyra PALM tables contain an embedded NULL; the length of the table is equal to the embedded NULL position minues 2
+
+file<-read.delim(file1name, header=T, nrow=XXXXX)                                                         #nrow = embedded null line position is -2
