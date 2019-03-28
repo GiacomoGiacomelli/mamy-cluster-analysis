@@ -16,7 +16,7 @@ PALM table example:
 - Channel: relevant only for dual color
 - Z Slice: relevant only for Z stacks 
 
-ROI modification script:
+Script_R1_ROI_mod (ROI modification script):
 - Input: ROIs obtained via Fiji -> need to be named Cell*.txt
 - Output: ROIs ready to be used for "PALM data analysis" script -> R.Cell*.txt
 
