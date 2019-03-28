@@ -4,12 +4,21 @@
 library("spatstat")
 
 table<-read.delim("path/OutputTable1.txt", header=T)  #import table
-ROI<-read.delim("path/R.Cell*.txt", header=T)         #import ROI - it can also be done for whole fields of view
-asd<-readRDS(file="AreaList.RData")
 
+ROI<-read.delim("path/R.Cell*.txt", header=T)         #import single cell ROI
 povA<-owin(poly=list(list(x=10*ROI$X, y=10*ROI$Y)))   #the multiplication by 10 is done only when using R.Cell*.txt
-ppA<-as.ppp(f2c0[c(5:6)],povA)
+ppA<-as.ppp(table[c(5:6)],povA)
 realsA<-subset(ppA,povA)
 ExperimentalA<-Gest(X=realsA)
 plot(ExperimentalA)
 plot((ExperimentalA$han-ExperimentalA$theo)~ExperimentalA$r)
+
+####alternative with whole field of view - using the same table from PALM analysis but multiple ROIs
+
+ROIs<-readRDS(file="AreaListX.RData")                 #import all the ROIs from the field of view
+povT<-owin(poly=ROIs)
+ppT<-as.ppp(table[c(5:6)],povT)
+realsT<-subset(ppT,povT)
+ExperimentalT<-Gest(X=realsT)
+plot(ExperimentalT)
+plot((ExperimentalT$han-ExperimentalT$theo)~ExperimentalT$r)
