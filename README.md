@@ -30,3 +30,5 @@ PALM_analysis_output example: (first 13 columns are the same as the "Elyra_Table
 - ClusterName: Name of the cluster to which the event belongs (Cluster.X)
 - ClustSize: Number of events associated to the cluster
 - LocalDensity: Number of events in a squared area centered around the event (50nm side)
+- Field: Name of the field of view
+- ClustMaxDist
