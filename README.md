@@ -2,7 +2,7 @@
 
 Available Files:
 
-Elyra table example: 
+Elyra_Table_example: 
 - Index
 - First Frame: Frame at which an event firstly appear
 - Number Frames: (relevant only when grouping)
