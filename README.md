@@ -1,3 +1,5 @@
 # mamy-cluster-analysis
 
-R script for paper
+2 scripts available:
+ROI modification script
+PALM data analysis
