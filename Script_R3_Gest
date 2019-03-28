@@ -3,7 +3,13 @@
 ############################################################################################################################################################################
 library("spatstat")
 
-povA<-owin(poly=list(list(x=10*Af2c0$X, y=10*Af2c0$Y)))
+table<-read.delim("path/PALMtable.txt", header=T)
+ROI<-read.delim("path/R.Cell0.txt", header=T)    #import ROI - it can also be done for whole fields of view
+
+
+#import table
+
+povA<-owin(poly=list(list(x=10*ROI$X, y=10*ROI$Y)))    #
 ppA<-as.ppp(f2c0[c(5:6)],povA)
 realsA<-subset(ppA,povA)
 ExperimentalA<-Gest(X=realsA)
