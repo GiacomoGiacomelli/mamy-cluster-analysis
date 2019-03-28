@@ -43,3 +43,8 @@ PALM_analysis_output example: (first 13 columns are the same as the "Elyra_Table
 - MinDens: Minimum Local Density within the cluster
 - ClosestNeigh: Distance from the clostest neighbouring event
 - ClosestNeighIndex: Index of the clostest neighbouring event
+
+Script_R3_Gest (Gest): Estimates the nearest neighbour distance distribution function G(r) from a point pattern in a window of arbitrary shape.
+- Input: AreaListX.RData (ROIs) or ROIs obtained from "Script_R1_ROI_mod"
+- Input: OutputTableX.txt (PALM_analysis_output example)
+- Output: Gest plot, Gest(experimental-theoretical) plot
