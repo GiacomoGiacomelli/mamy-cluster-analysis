@@ -1,0 +1,11 @@
+############################################################################################################################################################################
+#Gest Function and difference between real and theoretical events distributions
+############################################################################################################################################################################
+library("spatstat")
+
+povA<-owin(poly=list(list(x=10*Af2c0$X, y=10*Af2c0$Y)))
+ppA<-as.ppp(f2c0[c(5:6)],povA)
+realsA<-subset(ppA,povA)
+ExperimentalA<-Gest(X=realsA)
+plot(ExperimentalA)
+plot((ExperimentalA$han-ExperimentalA$theo)~ExperimentalA$r)
