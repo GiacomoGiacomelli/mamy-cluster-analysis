@@ -31,4 +31,10 @@ PALM_analysis_output example: (first 13 columns are the same as the "Elyra_Table
 - ClustSize: Number of events associated to the cluster
 - LocalDensity: Number of events in a squared area centered around the event (50nm side)
 - Field: Name of the field of view
-- ClustMaxDist
+- ClustMaxDist: Maximum distance between events belonging to the same cluster
+- Unique: Filter column to collect parameters belonging to clusters
+- AvgDens: Average Local Density within the cluster
+- MaxDens: Maximum Local Density within the cluster
+- MinDens: Minimum Local Density within the cluster
+- ClosestNeigh: Distance from the clostest neighbouring event
+- ClosestNeighIndex: Index of the clostest neighbouring event
