@@ -3,13 +3,11 @@
 ############################################################################################################################################################################
 library("spatstat")
 
-table<-read.delim("path/PALMtable.txt", header=T)
-ROI<-read.delim("path/R.Cell0.txt", header=T)    #import ROI - it can also be done for whole fields of view
+table<-read.delim("path/OutputTable1.txt", header=T)  #import table
+ROI<-read.delim("path/R.Cell*.txt", header=T)         #import ROI - it can also be done for whole fields of view
+asd<-readRDS(file="AreaList.RData")
 
-
-#import table
-
-povA<-owin(poly=list(list(x=10*ROI$X, y=10*ROI$Y)))    #
+povA<-owin(poly=list(list(x=10*ROI$X, y=10*ROI$Y)))   #the multiplication by 10 is done only when using R.Cell*.txt
 ppA<-as.ppp(f2c0[c(5:6)],povA)
 realsA<-subset(ppA,povA)
 ExperimentalA<-Gest(X=realsA)
