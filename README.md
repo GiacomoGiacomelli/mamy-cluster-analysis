@@ -19,7 +19,7 @@ Elyra_Table_example:
 
 Script_R1_ROI_mod (ROI modification script):
 - Input: ROIs obtained via Fiji -> need to be named Cell*.txt
-- Output: ROIs ready to be used for "PALM data analysis" script -> R.Cell*.txt
+- Output: ROIs ready to be used for "Script_R2_PALM analysis" script -> R.Cell*.txt
 
 Script_R2_PALM analysis (PALM data analysis):
 - Input: ROIs obtained from "Script_R1_ROI_mod"
